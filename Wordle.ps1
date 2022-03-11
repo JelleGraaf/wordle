@@ -1,7 +1,3 @@
-# To do:
-# - Fix multiple letters in word indication
-# - Show list of letters with their indication (unused / not in word / in word / correct place)
-
 param (
     [Parameter(Mandatory = $false)]
     [Switch]$Dutch
@@ -66,9 +62,8 @@ $Solution = ($WordList | Get-Random).ToUpper()
 
 # Main code
 Clear-Host
-Write-Host "Welcome to a PowerShell version of the game known as Wordle/Lingo. You have six attempts to guess the word." -ForegroundColor Yellow
 while ($Attempts -le 5) {
-    $GuessInput = Read-Host "`r`nEnter your five-letter guess"
+    $GuessInput = Read-Host "`r`nEnter your five-letter guess (attempt $Attemps)"
     while ($GuessList -notcontains $GuessInput -and $WordList -notcontains $GuessInput) {
         $GuessInput = Read-Host "Incorrect input, or word not in the list ($GuessInput). Please enter a valid five letter word"
     }
