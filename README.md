@@ -10,6 +10,5 @@ After each guess, your guess will be shown with the following hints:
 
 ## To do:
 - Indicate the correct amount of letters when multiple are guessed (when you guess HELLO now and the word is LABOR, it will show two yellow L's)
-- Show list of letters with their indication (unused / not in word / in word / correct place), like in Wordle
 - more fancy semi-graphics!
 
